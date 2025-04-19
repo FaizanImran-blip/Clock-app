@@ -1,30 +1,39 @@
-# 🕰️ Dart Clock Timer App
+# 🕒 2D TERMINAL DIGITAL CLOCK | Dart CLI Project
 
-This is a simple **clock simulation** application written in Dart.  
-It displays seconds, minutes, and hours as they increment in real time, and allows the user to view the current system date and time.
+A beautifully animated **2D digital clock** built with Dart, rendered right inside your terminal.  
+Displays hours, minutes, and seconds in a clean boxy layout, updated **every second** with a smooth refresh.
 
 ---
 
-## 🧾 Features
+## 📸 Preview
 
-- Simulates a ticking clock that updates every second.
-- Automatically increments minutes and hours after 59 seconds and 59 minutes.
-- Stops automatically after reaching 12 hours.
-- Option to check the exact current system time using Dart's `DateTime`.
+---
+
+## 🚀 Features
+
+- 🔁 Real-time time display with 1-second interval updates
+- 💻 Simple terminal-based 2D ASCII interface
+- 🧽 Auto-clears screen for smooth animation
+- 📅 Displays exact date & time on demand
+- 🎛️ User menu interaction (check time / start clock)
 
 ---
 
 ## 📦 Requirements
 
-- Dart SDK installed on your system.
-- A terminal or command-line interface.
+- Dart SDK 2.17 or higher
+- Terminal/console that supports **ANSI escape sequences**
 
 ---
 
-## ▶️ How to Run
+## 🧑‍💻 Getting Started
 
-1. **Save the code** into a Dart file, for example: `clock.dart`
-2. Open terminal and run:
+### 📥 Clone this repo
 
 ```bash
-dart run clock.dart
+git clone https://github.com/your-username/dart-2d-clock.git
+cd dart-2d-clock
+📁 dart-2d-clock/
+└── main.dart        # Main source code for the 2D clock
+
+
