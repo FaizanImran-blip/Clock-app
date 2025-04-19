@@ -6,20 +6,44 @@ class Clock {
   int m;
   int s;
   late Timer _timer;
+  late int h;
+  late int w;
+  late int d;
 
-  Clock({this.m = 1, this.s = 59});
+  Clock({this.m = 1, this.s = 59}) {
+    h = 20;
+    w = 33;
+    d = 0;
+  }
   void show() {
     DateTime now = DateTime.now();
     print("Current Date-Time: $now");
   }
 
+  void dis() {
+    print("=========================::2D-CLOCK::=============================");
+    for (int i = 0; i < h; i++) {
+      stdout.write("||");
+      stdout.write("\t\t\t\t\t\t\t\t||\n");
+    }
+    for (int i = 0; i < w; i++) {
+      stdout.write("==");
+    }
+    print("");
+  }
+
+  void clr() {
+    print("\x1B[2J\x1B[0;0H");
+  }
+
   void start() {
     int i = -1;
     int e = 0;
-    _timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
+    _timer = Timer.periodic(Duration(seconds: 0), (Timer t) {
       i++;
-      print("Clock => Hour:[$e]: Minute: [${c[0]}] Second: [$i]");
-
+      dis();
+      print("Clock => Hours: [$d] minute :[$e]: seconds: [${c[0]}] neno-Seconds: [$i]");
+      clr();
       if (i == 59) {
         i = -1;
         c[0] = c[0] + 1;
@@ -28,6 +52,9 @@ class Clock {
       if (c[0] == 60) {
         c[0] = 0;
         e++;
+      }
+      if (e == 60) {
+        d++;
       }
 
       if (e == 12) {
@@ -40,17 +67,19 @@ class Clock {
 
 void main() {
   Clock c = Clock();
-
   print("Press Enter to start ticking...");
   stdin.readLineSync();
   int ch = 1;
   c.start();
-  print("1 - Check exact date and time:");
+  print("1 :- Check exact date and time :-");
+  print("2 :- Start the clock -:");
   ch = int.parse(stdin.readLineSync()!);
-  c.start();
   switch (ch) {
     case 1:
       c.show();
+      break;
+    case 2:
+      c.start();
       break;
     default:
       print("invalid::selection::");
