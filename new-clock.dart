@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:async';
 
-class Clock {
+class Cloc {
   late Timer _timer;
   final int h = 20;
   final int w = 29;
@@ -44,7 +44,7 @@ class Clock {
 }
 
 void main() {
-  Clock c = Clock();
+  Cloc c = Cloc();
   print("Press Enter to continue...");
   stdin.readLineSync();
 
