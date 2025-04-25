@@ -25,15 +25,3 @@ Displays hours, minutes, and seconds in a clean boxy layout, updated **every sec
 - Terminal/console that supports **ANSI escape sequences**
 
 ---
-
-## 🧑‍💻 Getting Started
-
-### 📥 Clone this repo
-
-```bash
-git clone https://github.com/your-username/dart-2d-clock.git
-cd dart-2d-clock
-📁 dart-2d-clock/
-└── main.dart        # Main source code for the 2D clock
-
-
