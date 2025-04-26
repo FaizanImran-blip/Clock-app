@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:async';
 
-class Clo {
+class Clock {
   List<int> c = [0];
   int m;
   int s;
@@ -10,7 +10,7 @@ class Clo {
   late int w;
   late int d;
 
-  Clo({this.m = 1, this.s = 59}) {
+  Clock({this.m = 1, this.s = 59}) {
     h = 20;
     w = 33;
     d = 0;
@@ -66,7 +66,7 @@ class Clo {
 }
 
 void main() {
-  Clo c = Clo();
+  Clock c = Clock();
   print("Press Enter to start ticking...");
   stdin.readLineSync();
   int ch = 1;
