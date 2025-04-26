@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:async';
 
-class Cloc {
+class Clo {
   late Timer _timer;
   final int h = 20;
   final int w = 29;
@@ -44,7 +44,7 @@ class Cloc {
 }
 
 void main() {
-  Cloc c = Cloc();
+  Clo c = Clo();
   print("Press Enter to continue...");
   stdin.readLineSync();
 
