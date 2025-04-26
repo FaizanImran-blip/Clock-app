@@ -18,10 +18,3 @@ Displays hours, minutes, and seconds in a clean boxy layout, updated **every sec
 - 🎛️ User menu interaction (check time / start clock)
 
 ---
-
-## 📦 Requirements
-
-- Dart SDK 2.17 or higher
-- Terminal/console that supports **ANSI escape sequences**
-
----
