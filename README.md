@@ -3,8 +3,6 @@
 A beautifully animated **2D digital clock** built with Dart, rendered right inside your terminal.  
 Displays hours, minutes, and seconds in a clean boxy layout, updated **every second** with a smooth refresh.
 
----
-
 ## 📸 Preview
 
 ---
