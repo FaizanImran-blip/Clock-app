@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:async';
 
-class Clok {
+class Clock {
   List<int> c = [0];
   int m;
   int s;
@@ -10,7 +10,7 @@ class Clok {
   late int w;
   late int d;
 
-  Clok({this.m = 1, this.s = 59}) {
+  Clock({this.m = 1, this.s = 59}) {
     h = 20;
     w = 33;
     d = 0;
@@ -21,7 +21,7 @@ class Clok {
   }
 
   void dis() {
-    print("=========================::2D-CLOCK::=============================");
+    print("=========================::2D-Clock::=============================");
     for (int i = 0; i < h; i++) {
       stdout.write("||");
       stdout.write("\t\t\t\t\t\t\t\t||\n");
@@ -66,13 +66,13 @@ class Clok {
 }
 
 void main() {
-  Clok c = Clok();
+  Clock c = Clock();
   print("Press Enter to start ticking...");
   stdin.readLineSync();
   int ch = 1;
   c.start();
   print("1 :- Check exact date and time :-");
-  print("2 :- Start the clock -:");
+  print("2 :- Start the Clock -:");
   ch = int.parse(stdin.readLineSync()!);
   switch (ch) {
     case 1:
