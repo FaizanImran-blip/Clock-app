@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:async';
 
-class Clok {
+class Clock {
   late Timer _timer;
   final int h = 20;
   final int w = 29;
@@ -12,7 +12,7 @@ class Clok {
   }
 
   void dis(int hours, int minutes, int seconds) {
-    print("=========================::2D-CLOCK::=====================");
+    print("=========================::2D-Clock::=====================");
     for (int i = 0; i < h; i++) {
       if (i == h ~/ 2 - 1) {
         stdout.write("||" + "\t" * 3 + "Hours   : ${hours.toString().padLeft(2, '0')}" + "\t" * 3 + "||\n");
@@ -44,12 +44,12 @@ class Clok {
 }
 
 void main() {
-  Clok c = Clok();
+  Clock c = Clock();
   print("Press Enter to continue...");
   stdin.readLineSync();
 
   print("1 :- Check exact date and time");
-  print("2 :- Start the clock");
+  print("2 :- Start the Clock");
   int ch = int.parse(stdin.readLineSync()!);
 
   switch (ch) {
