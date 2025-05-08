@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'dart:async';
 
-class Clock {
+class Cloc {
   List<int> c = [0];
   int m;
   int s;
@@ -10,7 +10,7 @@ class Clock {
   late int w;
   late int d;
 
-  Clock({this.m = 1, this.s = 59}) {
+  Cloc({this.m = 1, this.s = 59}) {
     h = 20;
     w = 33;
     d = 0;
@@ -21,7 +21,7 @@ class Clock {
   }
 
   void dis() {
-    print("=========================::2D-Clock::=============================");
+    print("=========================::2D-Cloc::=============================");
     for (int i = 0; i < h; i++) {
       stdout.write("||");
       stdout.write("\t\t\t\t\t\t\t\t||\n");
@@ -42,7 +42,7 @@ class Clock {
     _timer = Timer.periodic(Duration(seconds: 0), (Timer t) {
       i++;
       dis();
-      print("Clock => Hours: [$d] minute :[$e]: seconds: [${c[0]}] neno-Seconds: [$i]");
+      print("Cloc => Hours: [$d] minute :[$e]: seconds: [${c[0]}] neno-Seconds: [$i]");
       clr();
       if (i == 59) {
         i = -1;
@@ -58,7 +58,7 @@ class Clock {
       }
 
       if (e == 12) {
-        print("Clock reached 12 hours. Stopping.");
+        print("Cloc reached 12 hours. Stopping.");
         _timer.cancel();
       }
     });
@@ -66,13 +66,13 @@ class Clock {
 }
 
 void main() {
-  Clock c = Clock();
+  Cloc c = Cloc();
   print("Press Enter to start ticking...");
   stdin.readLineSync();
   int ch = 1;
   c.start();
   print("1 :- Check exact date and time :-");
-  print("2 :- Start the Clock -:");
+  print("2 :- Start the Cloc -:");
   ch = int.parse(stdin.readLineSync()!);
   switch (ch) {
     case 1:
