@@ -1,6 +1,6 @@
-# 🕒 2D TERMINAL DIGITAL Clock | Dart CLI Project
+# 🕒 2D TERMINAL DIGITAL Cloc | Dart CLI Project
 
-A beautifully animated **2D digital Clock** built with Dart, rendered right inside your terminal.  
+A beautifully animated **2D digital Cloc** built with Dart, rendered right inside your terminal.  
 Displays hours, minutes, and seconds in a clean boxy layout, updated **every second** with a smooth refresh.
 
 ## 🚀 Features
@@ -9,6 +9,6 @@ Displays hours, minutes, and seconds in a clean boxy layout, updated **every sec
 - 💻 Simple terminal-based 2D ASCII interface
 - 🧽 Auto-clears screen for smooth animation
 - 📅 Displays exact date & time on demand
-- 🎛️ User menu interaction (check time / start Clock)
+- 🎛️ User menu interaction (check time / start Cloc)
 
 ---
