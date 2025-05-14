@@ -38,7 +38,8 @@ class Clokk {
     _timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
       DateTime now = DateTime.now();
       clr();
-      dis(now.hour, now.minute, now.second);
+      int hour = now.hour % 12 == 0 ? 12 : now.hour % 12;
+      dis(hour, now.minute, now.second);
     });
   }
 }
