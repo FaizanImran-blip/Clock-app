@@ -8,12 +8,9 @@ class Clokk {
   late Timer _timer;
   late int h;
   late int w;
-  late int d;
-
   Clokk({this.m = 1, this.s = 59}) {
     h = 20;
     w = 33;
-    d = 0;
   }
   void show() {
     DateTime now = DateTime.now();
@@ -32,18 +29,15 @@ class Clokk {
     print("");
   }
 
-  void clr() {
-    print("\x1B[2J\x1B[0;0H");
-  }
 
   void start() {
     int i = -1;
     int e = 0;
-    _timer = Timer.periodic(Duration(seconds: 0), (Timer t) {
+    _timer = Timer.periodic(Duration(seconds: 1), (Timer t) {
+      stdout.write("\x1B[2J\x1B[0;H");
       i++;
       dis();
-      print("Clokk => Hours: [$d] minute :[$e]: seconds: [${c[0]}] neno-Seconds: [$i]");
-      clr();
+      print("Clokk => Hours :[$e]: Minuters: [${c[0]}] Seconds: [$i]");
       if (i == 59) {
         i = -1;
         c[0] = c[0] + 1;
@@ -52,9 +46,6 @@ class Clokk {
       if (c[0] == 60) {
         c[0] = 0;
         e++;
-      }
-      if (e == 60) {
-        d++;
       }
 
       if (e == 12) {
@@ -70,7 +61,10 @@ void main() {
   print("Press Enter to start ticking...");
   stdin.readLineSync();
   int ch = 1;
-  c.start();
+  bool e=true;
+  bool a=e;
+  while(a==e)
+  {
   print("1 :- Check exact date and time :-");
   print("2 :- Start the Clokk -:");
   ch = int.parse(stdin.readLineSync()!);
@@ -80,8 +74,10 @@ void main() {
       break;
     case 2:
       c.start();
+      e=false;
       break;
     default:
       print("invalid::selection::");
+  }
   }
 }
