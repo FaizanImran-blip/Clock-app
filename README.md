@@ -2,7 +2,7 @@
 ---
 A beautifully animated **2D digital Clokk** built with Dart, rendered right inside your terminal.  
 Displays hours, minutes, and seconds in a clean boxy layout, updated **every second** with a smooth refresh.
-
+---
 ## 🚀 Features
 
 - 🔁 Real-time time display with 1-second interval updates
