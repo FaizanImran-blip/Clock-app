@@ -1,5 +1,5 @@
 # 🕒 2D TERMINAL DIGITAL Clokk | Dart CLI Project
----
+
 A beautifully animated **2D digital Clokk** built with Dart, rendered right inside your terminal.  
 Displays hours, minutes, and seconds in a clean boxy layout, updated **every second** with a smooth refresh.
 
